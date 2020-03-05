@@ -1,0 +1,16 @@
+# -*- mode: org; -*-
+
+# Disable html styles when exporting
+#+HTML_HTML5_FANCY:
+#+OPTIONS: html-style:nil html-scripts:nil toc:nil num:nil html5
+
+#+AUTHOR: Your Name here
+#+TITLE: Notes and Guides
+
+# Code highlighter
+#+HTML_HEAD: <script src="./js/jquery-3.4.1.min.js"></script>
+#+HTML_HEAD: <script src="./js/prism.js"></script>
+#+HTML_HEAD: <link href="./css/prism_tomorrow_night.css" rel="stylesheet" id="code-theme"/>
+
+# My CSS Style
+#+HTML_HEAD: <link id="main-theme" rel="stylesheet" type="text/css" href="./css/styles.css"/>

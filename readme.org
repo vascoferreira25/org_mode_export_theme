@@ -1,0 +1,125 @@
+#+SETUPFILE: ./.setup_docs.setup
+
+* Org Mode Notes
+
+  This is the settings I use to export my notes and guides with org-mode.
+
+** Setup
+
+*** Config
+
+    Add the following settings in your config.
+
+    #+begin_src elisp
+(setq custom-html-preamble "
+<ul>
+  <li><a href=\"./index.html\">Home</a></li>
+</ul>
+<div id=\"toc\"></div>
+")
+
+;; Change the `author' here.
+(setq custom-html-postamble "
+<p class=\"author\">Your Name Here</p>
+
+<!-- Initialize Custom Styling JS -->
+<script src=\"./js/styling.js\"></script>
+")
+
+(setq org-html-postamble t)
+(setq org-html-preamble-format `(("en" ,custom-html-preamble)))
+(setq org-html-postamble-format `(("en" ,custom-html-postamble)))
+
+;; Change the `base-directory' to the path of your notes,
+;; this way you can export all your notes at once
+(setq org-publish-project-alist
+      '(("notes"
+         :publishing-function org-html-publish-to-html
+         ;; :exclude "\(org_capture_.*\)"
+         :base-directory "v:/OrgMode"
+         :base-extension "org"
+         :publishing-directory "v:/OrgMode/out/")))
+    #+end_src
+
+*** Setup File
+
+    Add this to the top of your ~.org~ files.
+
+    #+begin_src org
+#+SETUPFILE: ./.setup_docs.setup
+    #+end_src
+
+    The setup file:
+
+    #+begin_src org
+# -*- mode: org; -*-
+
+# Disable html styles when exporting
+#+HTML_HTML5_FANCY:
+#+OPTIONS: html-style:nil html-scripts:nil toc:nil num:nil html5
+
+#+AUTHOR: Your Name here
+#+TITLE: Notes and Guides
+
+# Code highlighter
+#+HTML_HEAD: <script src="./js/jquery-3.4.1.min.js"></script>
+#+HTML_HEAD: <script src="./js/prism.js"></script>
+#+HTML_HEAD: <link href="./css/prism_tomorrow_night.css" rel="stylesheet" id="code-theme"/>
+
+# My CSS Style
+#+HTML_HEAD: <link id="main-theme" rel="stylesheet" type="text/css" href="./css/styles.css"/>
+    #+end_src
+
+    You can change the theme if Prism.js by changing ~/prism_tomorrow_night.css~ to another
+    file in the ~/css/~ folder.
+
+    There are the available themes:
+    - ~prism_coy.css~
+    - ~prism_default.css~
+    - ~prism_okaidia.css~
+    - ~prism_solarized_light.css~
+    - ~prism_tomorrow_night.css~
+
+** How to use it
+
+   Export your notes using ~(org-publish "notes")~
+   
+   Check the result in the ~out~ folder.
+
+** How to customize it
+
+   To change the look of the page, change the ~/css/styles.css~ file.
+
+   If you only want to change the colors you can change the css variables:
+
+   #+begin_src css
+:root {
+	--main-color: #c5c5c5;
+	--main-bg-color: #0f1419;
+	--main-bg-alt-color: #14191f;
+	
+	--main-highlight-color: #ffb454;
+	--main-link-color: #19afd0;
+	
+	--main-box-shadow: #8f8f8f;
+	--main-border-color: rgba(0, 0, 0, 0.8);
+	
+	--main-code-bg-color: #1d1f21;
+	--main-src-bg-color: #222a33;
+	
+	--main-thead-bg-color: #242638;
+	--main-thead-child: #242638;
+	--main-tbody-child: #14191f;
+	--main-table-hover: #282c34;;
+	
+	--main-author-color: #268bd2;
+	
+	--main-margin: 20px;
+	--main-margin-list: 32px;
+	--main-margin-special: 46px;
+}
+   #+end_src
+
+** This is what it looks like
+
+   [[./out/index.html][Check the page]]
