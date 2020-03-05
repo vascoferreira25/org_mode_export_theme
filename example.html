@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-03-05 Thu 16:35 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Example File to show the HTML Theme Notes and Guides</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Vasco Ferreira" />
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/prism.js"></script>
+<link href="./css/prism_tomorrow_night.css" rel="stylesheet" id="code-theme"/>
+<link id="main-theme" rel="stylesheet" type="text/css" href="./css/styles.css"/>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="preamble" class="status">
+
+<ul>
+  <li><a href="./index.html">Home</a></li>
+</ul>
+<div id="toc"></div>
+</div>
+<div id="content">
+<h1 class="title">Example File to show the HTML Theme Notes and Guides</h1>
+
+<div id="outline-container-org5cc4f1a" class="outline-2">
+<h2 id="org5cc4f1a">Lorem Ipsum Dolor Sit Amet</h2>
+<div class="outline-text-2" id="text-org5cc4f1a">
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit
+tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et,
+mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis
+parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor.
+Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum.
+Nam vestibulum accumsan nisl.
+</p>
+
+<blockquote>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor
+tellus.
+</p>
+</blockquote>
+</div>
+
+<div id="outline-container-org703899c" class="outline-3">
+<h3 id="org703899c">Quicksort Algorithm</h3>
+<div class="outline-text-3" id="text-org703899c">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #4f97d7; font-weight: bold;">import</span> numpy <span style="color: #4f97d7; font-weight: bold;">as</span> np
+
+<span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">quicksort</span><span style="color: #4f97d7;">(</span>array<span style="color: #4f97d7;">)</span>:
+    <span style="color: #9f8766;">"""Sort an array using the quick sort algorithm.</span>
+<span style="color: #9f8766;">    Takes an array as argument.</span>
+<span style="color: #9f8766;">    This implementation is recursive."""</span>
+
+    <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #4f97d7;">len</span><span style="color: #4f97d7;">(</span>array<span style="color: #4f97d7;">)</span> &lt;= <span style="color: #a45bad;">1</span>:
+        <span style="color: #4f97d7; font-weight: bold;">return</span> array
+
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Get the element in the center of the array</span>
+    <span style="color: #7590db;">middle_point</span> = <span style="color: #4f97d7;">int</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7;">len</span><span style="color: #bc6ec5;">(</span>array<span style="color: #bc6ec5;">)</span> / <span style="color: #a45bad;">2</span><span style="color: #4f97d7;">)</span>
+
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Calculate the median of 3 values, the first,</span>
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">the middle and the last elements of the array</span>
+    <span style="color: #7590db;">pivot</span> = np.median<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">[</span>array<span style="color: #2d9574;">[</span><span style="color: #a45bad;">0</span><span style="color: #2d9574;">]</span>, array<span style="color: #2d9574;">[</span>middle_point<span style="color: #2d9574;">]</span>, array<span style="color: #2d9574;">[</span><span style="color: #4f97d7;">len</span><span style="color: #67b11d;">(</span>array<span style="color: #67b11d;">)</span>-<span style="color: #a45bad;">1</span><span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)</span>
+
+    <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Filter array values by its relation with the pivot</span>
+    <span style="color: #7590db;">smaller</span> = <span style="color: #4f97d7;">[</span>x <span style="color: #4f97d7; font-weight: bold;">for</span> x <span style="color: #4f97d7; font-weight: bold;">in</span> array <span style="color: #4f97d7; font-weight: bold;">if</span> x &lt; pivot<span style="color: #4f97d7;">]</span>
+    <span style="color: #7590db;">equal</span> = <span style="color: #4f97d7;">[</span>x <span style="color: #4f97d7; font-weight: bold;">for</span> x <span style="color: #4f97d7; font-weight: bold;">in</span> array <span style="color: #4f97d7; font-weight: bold;">if</span> x== pivot<span style="color: #4f97d7;">]</span>
+    <span style="color: #7590db;">larger</span> = <span style="color: #4f97d7;">[</span>x <span style="color: #4f97d7; font-weight: bold;">for</span> x <span style="color: #4f97d7; font-weight: bold;">in</span> array <span style="color: #4f97d7; font-weight: bold;">if</span> x &gt; pivot<span style="color: #4f97d7;">]</span>
+
+    <span style="color: #4f97d7; font-weight: bold;">return</span> quicksort<span style="color: #4f97d7;">(</span>smaller<span style="color: #4f97d7;">)</span> + equal + quicksort<span style="color: #4f97d7;">(</span>larger<span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7; font-weight: bold;">print</span><span style="color: #4f97d7;">(</span>quicksort<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">[</span><span style="color: #a45bad;">5</span>, <span style="color: #a45bad;">4</span>, <span style="color: #a45bad;">3</span>, <span style="color: #a45bad;">2</span>, <span style="color: #a45bad;">1</span><span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+[1, 2, 3, 4, 5]
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgaaa01ea" class="outline-3">
+<h3 id="orgaaa01ea">Lorem Ipsum Dolor Sit Amet</h3>
+<div class="outline-text-3" id="text-orgaaa01ea">
+<p>
+Aliquam erat volutpat. Nunc eleifend leo vitae magna. In id erat non orci
+commodo lobortis. Proin neque massa, cursus ut, gravida ut, lobortis eget,
+lacus. Sed diam. Praesent fermentum tempor tellus. Nullam tempus. Mauris ac
+felis vel velit tristique imperdiet. Donec at pede. Etiam vel neque nec dui
+dignissim bibendum. Vivamus id enim. Phasellus neque orci, porta a, aliquet
+quis, semper a, massa. Phasellus purus. Pellentesque tristique imperdiet
+tortor. Nam euismod tellus id erat.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Lorem Ipsum</th>
+<th scope="col" class="org-left">Dolor Sit</th>
+<th scope="col" class="org-left">Amet, consectetuer</th>
+<th scope="col" class="org-left">Adipiscing elit</th>
+<th scope="col" class="org-left">Donec hendrerit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Donec vitae dolor.</td>
+<td class="org-left">Phasellus neque orci, porta a, aliquet quis, semper a, massa.</td>
+<td class="org-left">Fusce commodo.</td>
+<td class="org-left">Donec pretium posuere tellus.</td>
+<td class="org-left">Pellentesque tristique imperdiet tortor.</td>
+</tr>
+
+<tr>
+<td class="org-left">Integer placerat tristique nisl.</td>
+<td class="org-left">Etiam vel neque nec dui dignissim bibendum.</td>
+<td class="org-left">Pellentesque dapibus suscipit ligula.</td>
+<td class="org-left">Donec vitae dolor.</td>
+<td class="org-left">Sed bibendum.</td>
+</tr>
+
+<tr>
+<td class="org-left">Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.</td>
+<td class="org-left">Phasellus at dui in ligula mollis ultricies.</td>
+<td class="org-left">Nullam rutrum.</td>
+<td class="org-left">Phasellus at dui in ligula mollis ultricies.</td>
+<td class="org-left">Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.</td>
+</tr>
+
+<tr>
+<td class="org-left">Etiam vel tortor sodales tellus ultricies commodo.</td>
+<td class="org-left">Etiam vel neque nec dui dignissim bibendum.</td>
+<td class="org-left">Integer placerat tristique nisl.</td>
+<td class="org-left">Nunc rutrum turpis sed pede.</td>
+<td class="org-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+</tr>
+
+<tr>
+<td class="org-left">Nam vestibulum accumsan nisl.</td>
+<td class="org-left">Aenean in sem ac leo mollis blandit.</td>
+<td class="org-left">Nam euismod tellus id erat.</td>
+<td class="org-left">Donec vitae dolor.</td>
+<td class="org-left">Praesent fermentum tempor tellus.</td>
+</tr>
+
+<tr>
+<td class="org-left">Phasellus at dui in ligula mollis ultricies.</td>
+<td class="org-left">Nullam tempus.</td>
+<td class="org-left">Nullam eu ante vel est convallis dignissim.</td>
+<td class="org-left">Nullam eu ante vel est convallis dignissim.</td>
+<td class="org-left">Sed bibendum.</td>
+</tr>
+
+<tr>
+<td class="org-left">Integer placerat tristique nisl.</td>
+<td class="org-left">Phasellus purus.</td>
+<td class="org-left">Vivamus id enim.</td>
+<td class="org-left">Nullam tristique diam non turpis.</td>
+<td class="org-left">Nunc eleifend leo vitae magna.</td>
+</tr>
+
+<tr>
+<td class="org-left">Nullam libero mauris, consequat quis, varius et, dictum id, arcu.</td>
+<td class="org-left">Phasellus neque orci, porta a, aliquet quis, semper a, massa.</td>
+<td class="org-left">Nam vestibulum accumsan nisl.</td>
+<td class="org-left">Pellentesque tristique imperdiet tortor.</td>
+<td class="org-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+</tr>
+
+<tr>
+<td class="org-left">Phasellus lacus.</td>
+<td class="org-left">In id erat non orci commodo lobortis.</td>
+<td class="org-left">Donec vitae dolor.</td>
+<td class="org-left">In id erat non orci commodo lobortis.</td>
+<td class="org-left">Nam a sapien.</td>
+</tr>
+
+<tr>
+<td class="org-left">Pellentesque dapibus suscipit ligula.</td>
+<td class="org-left">Cras placerat accumsan nulla.</td>
+<td class="org-left">Donec pretium posuere tellus.</td>
+<td class="org-left">Curabitur lacinia pulvinar nibh.</td>
+<td class="org-left">Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.</td>
+</tr>
+
+<tr>
+<td class="org-left">Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.</td>
+<td class="org-left">Curabitur lacinia pulvinar nibh.</td>
+<td class="org-left">Curabitur vulputate vestibulum lorem.</td>
+<td class="org-left">Cras placerat accumsan nulla.</td>
+<td class="org-left">Nunc porta vulputate tellus.</td>
+</tr>
+
+<tr>
+<td class="org-left">Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.</td>
+<td class="org-left">Nullam tempus.</td>
+<td class="org-left">Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.</td>
+<td class="org-left">Pellentesque condimentum, magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque sit amet urna.</td>
+<td class="org-left">Vivamus id enim.</td>
+</tr>
+
+<tr>
+<td class="org-left">Etiam vel neque nec dui dignissim bibendum.</td>
+<td class="org-left">Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.</td>
+<td class="org-left">Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.</td>
+<td class="org-left">Nullam tristique diam non turpis.</td>
+<td class="org-left">Pellentesque dapibus suscipit ligula.</td>
+</tr>
+
+<tr>
+<td class="org-left">Etiam vel tortor sodales tellus ultricies commodo.</td>
+<td class="org-left">Curabitur lacinia pulvinar nibh.</td>
+<td class="org-left">Nunc rutrum turpis sed pede.</td>
+<td class="org-left">Aliquam feugiat tellus ut neque.</td>
+<td class="org-left">Cras placerat accumsan nulla.</td>
+</tr>
+
+<tr>
+<td class="org-left">Etiam laoreet quam sed arcu.</td>
+<td class="org-left">Etiam laoreet quam sed arcu.</td>
+<td class="org-left">Vivamus id enim.</td>
+<td class="org-left">Nullam tempus.</td>
+<td class="org-left">Donec at pede.</td>
+</tr>
+
+<tr>
+<td class="org-left">Etiam vel tortor sodales tellus ultricies commodo.</td>
+<td class="org-left">Nunc rutrum turpis sed pede.</td>
+<td class="org-left">Donec vitae dolor.</td>
+<td class="org-left">Mauris ac felis vel velit tristique imperdiet.</td>
+<td class="org-left">Nullam tempus.</td>
+</tr>
+
+<tr>
+<td class="org-left">Pellentesque dapibus suscipit ligula.</td>
+<td class="org-left">Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.</td>
+<td class="org-left">Pellentesque dapibus suscipit ligula.</td>
+<td class="org-left">Vivamus id enim.</td>
+<td class="org-left">Fusce commodo.</td>
+</tr>
+
+<tr>
+<td class="org-left">Phasellus at dui in ligula mollis ultricies.</td>
+<td class="org-left">Pellentesque dapibus suscipit ligula.</td>
+<td class="org-left">Nam euismod tellus id erat.</td>
+<td class="org-left">In id erat non orci commodo lobortis.</td>
+<td class="org-left">Pellentesque tristique imperdiet tortor.</td>
+</tr>
+
+<tr>
+<td class="org-left">Nullam rutrum.</td>
+<td class="org-left">Pellentesque tristique imperdiet tortor.</td>
+<td class="org-left">Nunc eleifend leo vitae magna.</td>
+<td class="org-left">Nam a sapien.</td>
+<td class="org-left">Mauris ac felis vel velit tristique imperdiet.</td>
+</tr>
+
+<tr>
+<td class="org-left">Donec posuere augue in quam.</td>
+<td class="org-left">Nam vestibulum accumsan nisl.</td>
+<td class="org-left">Nullam eu ante vel est convallis dignissim.</td>
+<td class="org-left">Phasellus purus.</td>
+<td class="org-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+</tr>
+
+<tr>
+<td class="org-left">Mauris ac felis vel velit tristique imperdiet.</td>
+<td class="org-left">Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.</td>
+<td class="org-left">Praesent fermentum tempor tellus.</td>
+<td class="org-left">Nunc rutrum turpis sed pede.</td>
+<td class="org-left">Nunc porta vulputate tellus.</td>
+</tr>
+
+<tr>
+<td class="org-left">Nunc eleifend leo vitae magna.</td>
+<td class="org-left">Nunc eleifend leo vitae magna.</td>
+<td class="org-left">Vivamus id enim.</td>
+<td class="org-left">Nunc porta vulputate tellus.</td>
+<td class="org-left">Nullam tempus.</td>
+</tr>
+
+<tr>
+<td class="org-left">Donec vitae dolor.</td>
+<td class="org-left">Praesent fermentum tempor tellus.</td>
+<td class="org-left">Nullam tristique diam non turpis.</td>
+<td class="org-left">Sed bibendum.</td>
+<td class="org-left">Donec posuere augue in quam.</td>
+</tr>
+
+<tr>
+<td class="org-left">Phasellus lacus.</td>
+<td class="org-left">Donec vitae dolor.</td>
+<td class="org-left">Phasellus at dui in ligula mollis ultricies.</td>
+<td class="org-left">Curabitur vulputate vestibulum lorem.</td>
+<td class="org-left">Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.</td>
+</tr>
+
+<tr>
+<td class="org-left">Pellentesque tristique imperdiet tortor.</td>
+<td class="org-left">Nam euismod tellus id erat.</td>
+<td class="org-left">Praesent fermentum tempor tellus.</td>
+<td class="org-left">Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.</td>
+<td class="org-left">Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.</td>
+</tr>
+
+<tr>
+<td class="org-left">Donec pretium posuere tellus.</td>
+<td class="org-left">Vivamus id enim.</td>
+<td class="org-left">Nulla posuere.</td>
+<td class="org-left">Nam vestibulum accumsan nisl.</td>
+<td class="org-left">Donec hendrerit tempor tellus.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit
+tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et,
+mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis
+parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor.
+Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam
+rutrum. Nam vestibulum accumsan nisl.
+</p>
+
+<ul class="org-ul">
+<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+<li>Praesent ullamcorper dui sit amet quam facilisis scelerisque.</li>
+<li>Nullam non nisl ac diam viverra dapibus.</li>
+<li>Nullam vitae diam a nulla pulvinar finibus.</li>
+<li>Nunc eget libero a tortor tristique egestas id ac nunc.</li>
+<li>Ut rhoncus nulla a dolor suscipit, id rhoncus nibh pharetra.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org255eb6d" class="outline-3">
+<h3 id="org255eb6d">Donec posuere augue in quam.</h3>
+<div class="outline-text-3" id="text-org255eb6d">
+<p>
+Aliquam erat volutpat. Nunc eleifend leo vitae magna. In id erat non orci
+commodo lobortis. Proin neque massa, cursus ut, gravida ut, lobortis eget,
+lacus. Sed diam. Praesent fermentum tempor tellus. Nullam tempus. Mauris ac
+felis vel velit tristique imperdiet. Donec at pede. Etiam vel neque nec dui
+dignissim bibendum. Vivamus id enim. Phasellus neque orci, porta a, aliquet
+quis, semper a, massa. Phasellus purus. Pellentesque tristique imperdiet
+tortor. Nam euismod tellus id erat.
+</p>
+
+<p>
+\[Area = \frac{(82 - (-38))}{2} = \frac{120}{2} = 60\]
+</p>
+
+<p>
+\[Assets = Liabilities + Equity\]
+</p>
+
+<p>
+\[TAM = 288 billions + 1.08 trillions + 58 billions = 1.4 trillions\]
+</p>
+
+<p>
+\[TV = FCF_\text{final year} * \frac{1 + LTGR}{IR - LTGR}\]
+</p>
+
+<p>
+Aliquam erat volutpat. Nunc eleifend leo vitae magna. In id erat non orci
+commodo lobortis. Proin neque massa, cursus ut, gravida ut, lobortis eget,
+lacus. Sed diam. Praesent fermentum tempor tellus. Nullam tempus. Mauris ac
+felis vel velit tristique imperdiet. Donec at pede. Etiam vel neque nec dui
+dignissim bibendum. Vivamus id enim. Phasellus neque orci, porta a, aliquet
+quis, semper a, massa. Phasellus purus. Pellentesque tristique imperdiet
+tortor. Nam euismod tellus id erat.
+</p>
+
+<p>
+\[V = Debt + Equity\]
+</p>
+
+<p>
+\[CoE = \text{Risk Free Rate} + \beta * (\text{Stock Market Return} - \text{Risk Free Rate})\]
+</p>
+
+<p>
+\[CoD = \text{Cost of Debt Rate} * (1 - \text{tax deduction})\]
+</p>
+
+<p>
+\[Tc = \text{Corporate tax rate}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org113492b" class="outline-3">
+<h3 id="org113492b">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</h3>
+<div class="outline-text-3" id="text-org113492b">
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit
+tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et,
+mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis
+parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor.
+Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam
+rutrum. Nam vestibulum accumsan nisl.
+</p>
+
+<ul class="org-ul">
+<li>Mauris efficitur arcu ut tempus feugiat.</li>
+<li>In egestas tortor nec turpis sodales lobortis.</li>
+<li>Nam non est id massa convallis congue eu quis nibh.</li>
+
+<li>Phasellus molestie odio eu diam sollicitudin, eu fermentum magna fermentum.</li>
+<li>Suspendisse quis odio in arcu vehicula tristique.</li>
+<li>Fusce imperdiet mauris a nulla porta ultricies.</li>
+<li>Pellentesque id metus eu ante feugiat ornare.</li>
+
+<li>Integer vel odio egestas, fringilla magna eget, gravida sem.</li>
+<li>Pellentesque in libero pulvinar, interdum erat in, viverra nulla.</li>
+<li>Sed at quam ut nisl ultricies congue sed id odio.</li>
+<li>Cras vel felis tristique, pharetra erat tincidunt, pharetra mi.</li>
+<li>Sed vulputate libero eget interdum egestas.</li>
+<li>Suspendisse fermentum dolor nec tellus dapibus hendrerit.</li>
+
+<li>Vestibulum ac lacus eget quam pellentesque finibus.</li>
+<li>Nullam sit amet turpis rutrum, aliquet risus vitae, mollis elit.</li>
+<li>Pellentesque ut eros posuere, gravida lorem ut, porttitor augue.</li>
+<li>Phasellus tristique purus ac feugiat fringilla.</li>
+<li>Quisque lobortis dolor eu placerat fringilla.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org891c563" class="outline-3">
+<h3 id="org891c563">Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.</h3>
+<div class="outline-text-3" id="text-org891c563">
+<p>
+Pellentesque dapibus suscipit ligula. Donec posuere augue in quam. Etiam vel
+tortor sodales tellus ultricies commodo. Suspendisse potenti. Aenean in sem
+ac leo mollis blandit. Donec neque quam, dignissim in, mollis nec, sagittis
+eu, wisi. Phasellus lacus. Etiam laoreet quam sed arcu. Phasellus at dui in
+ligula mollis ultricies. Integer placerat tristique nisl. Praesent augue.
+Fusce commodo. Vestibulum convallis, lorem a tempus semper, dui dui euismod
+elit, vitae placerat urna tortor vitae lacus. Nullam libero mauris, consequat
+quis, varius et, dictum id, arcu. Mauris mollis tincidunt felis. Aliquam
+feugiat tellus ut neque. Nulla facilisis, risus a rhoncus fermentum, tellus
+tellus lacinia purus, et dictum nunc justo sit amet elit.
+</p>
+
+
+<div class="figure">
+<p><img src="./img/example_spacemacs_1.png" alt="example_spacemacs_1.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org96cd7eb" class="outline-3">
+<h3 id="org96cd7eb">Nunc eleifend leo vitae magna.</h3>
+<div class="outline-text-3" id="text-org96cd7eb">
+<p>
+Pellentesque dapibus suscipit ligula. Donec posuere augue in quam. Etiam vel
+tortor sodales tellus ultricies commodo. Suspendisse potenti. Aenean in sem
+ac leo mollis blandit. Donec neque quam, dignissim in, mollis nec, sagittis
+eu, wisi. Phasellus lacus. Etiam laoreet quam sed arcu. Phasellus at dui in
+ligula mollis ultricies. Integer placerat tristique nisl. Praesent augue.
+Fusce commodo. Vestibulum convallis, lorem a tempus semper, dui dui euismod
+elit, vitae placerat urna tortor vitae lacus. Nullam libero mauris, consequat
+quis, varius et, dictum id, arcu. Mauris mollis tincidunt felis. Aliquam
+feugiat tellus ut neque. Nulla facilisis, risus a rhoncus fermentum, tellus
+tellus lacinia purus, et dictum nunc justo sit amet elit.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #7590db;">polygon</span> = <span style="color: #4f97d7;">[</span>
+    <span style="color: #bc6ec5;">[</span>-<span style="color: #a45bad;">3</span>, -<span style="color: #a45bad;">2</span><span style="color: #bc6ec5;">]</span>,
+    <span style="color: #bc6ec5;">[</span>-<span style="color: #a45bad;">1</span>, <span style="color: #a45bad;">4</span><span style="color: #bc6ec5;">]</span>,
+    <span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">6</span>, <span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span>,
+    <span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">3</span>, <span style="color: #a45bad;">10</span><span style="color: #bc6ec5;">]</span>,
+    <span style="color: #bc6ec5;">[</span>-<span style="color: #a45bad;">4</span>, <span style="color: #a45bad;">9</span><span style="color: #bc6ec5;">]</span>,
+    <span style="color: #bc6ec5;">[</span>-<span style="color: #a45bad;">3</span>, -<span style="color: #a45bad;">2</span><span style="color: #bc6ec5;">]</span>
+<span style="color: #4f97d7;">]</span>
+
+<span style="color: #7590db;">area</span> = <span style="color: #a45bad;">0</span>
+
+<span style="color: #4f97d7; font-weight: bold;">for</span> i <span style="color: #4f97d7; font-weight: bold;">in</span> <span style="color: #4f97d7;">range</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7;">len</span><span style="color: #bc6ec5;">(</span>polygon<span style="color: #bc6ec5;">)</span>-<span style="color: #a45bad;">1</span><span style="color: #4f97d7;">)</span>:
+    <span style="color: #7590db;">area</span> += <span style="color: #a45bad;">1</span>/<span style="color: #a45bad;">2</span> * polygon<span style="color: #4f97d7;">[</span>i<span style="color: #4f97d7;">][</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span> * polygon<span style="color: #4f97d7;">[</span>i+<span style="color: #a45bad;">1</span><span style="color: #4f97d7;">][</span><span style="color: #a45bad;">1</span><span style="color: #4f97d7;">]</span>
+    <span style="color: #7590db;">area</span> -= <span style="color: #a45bad;">1</span>/<span style="color: #a45bad;">2</span> * polygon<span style="color: #4f97d7;">[</span>i<span style="color: #4f97d7;">][</span><span style="color: #a45bad;">1</span><span style="color: #4f97d7;">]</span> * polygon<span style="color: #4f97d7;">[</span>i+<span style="color: #a45bad;">1</span><span style="color: #4f97d7;">][</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span>
+
+<span style="color: #4f97d7; font-weight: bold;">print</span><span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"The area of the polygon is: {}"</span>.<span style="color: #4f97d7;">format</span><span style="color: #bc6ec5;">(</span>area<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+The area of the polygon is: 60.0
+</pre>
+
+
+<p>
+Aliquam erat volutpat. Nunc eleifend leo vitae magna. In id erat non orci
+commodo lobortis. Proin neque massa, cursus ut, gravida ut, lobortis eget,
+lacus. Sed diam. Praesent fermentum tempor tellus. Nullam tempus. Mauris ac
+felis vel velit tristique imperdiet. Donec at pede. Etiam vel neque nec dui
+dignissim bibendum. Vivamus id enim. Phasellus neque orci, porta a, aliquet
+quis, semper a, massa. Phasellus purus. Pellentesque tristique imperdiet
+tortor. Nam euismod tellus id erat.
+</p>
+
+
+<div class="figure">
+<p><img src="./img/example_spacemacs_2.jpg" alt="example_spacemacs_2.jpg" />
+</p>
+</div>
+
+<p>
+Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec
+facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis
+odio. Nunc porta vulputate tellus. Nunc rutrum turpis sed pede. Sed bibendum.
+Aliquam posuere. Nunc aliquet, augue nec adipiscing interdum, lacus tellus
+malesuada massa, quis varius mi purus non odio. Pellentesque condimentum,
+magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque
+sit amet urna. Curabitur vulputate vestibulum lorem. Fusce sagittis, libero
+non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla
+lacinia eros. Sed id ligula quis est convallis tempor. Curabitur lacinia
+pulvinar nibh. Nam a sapien.
+</p>
+</div>
+
+<div id="outline-container-orgd30ccb1" class="outline-4">
+<h4 id="orgd30ccb1">Clojure</h4>
+<div class="outline-text-4" id="text-orgd30ccb1">
+</div>
+<ul class="org-ul">
+<li><a id="org902baa9"></a>Simple Example<br />
+<div class="outline-text-5" id="text-org902baa9">
+<div class="org-src-container">
+<pre class="src src-clojure"><span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">Simple Example</span>
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #7590db;">polygon</span>
+  <span style="color: #bc6ec5;">[</span>
+   <span style="color: #2d9574;">[</span><span style="color: #a45bad;">-3</span> <span style="color: #a45bad;">-2</span><span style="color: #2d9574;">]</span>
+   <span style="color: #2d9574;">[</span><span style="color: #a45bad;">-1</span> <span style="color: #a45bad;">4</span><span style="color: #2d9574;">]</span>
+   <span style="color: #2d9574;">[</span><span style="color: #a45bad;">6</span> <span style="color: #a45bad;">1</span><span style="color: #2d9574;">]</span>
+   <span style="color: #2d9574;">[</span><span style="color: #a45bad;">3</span> <span style="color: #a45bad;">10</span><span style="color: #2d9574;">]</span>
+   <span style="color: #2d9574;">[</span><span style="color: #a45bad;">-4</span> <span style="color: #a45bad;">9</span><span style="color: #2d9574;">]</span>
+   <span style="color: #2d9574;">[</span><span style="color: #a45bad;">-3</span> <span style="color: #a45bad;">-2</span><span style="color: #2d9574;">]</span>
+   <span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defn</span> <span style="color: #bc6ec5; font-weight: bold;">cross-multiplication</span> <span style="color: #bc6ec5;">[</span>points pa pb<span style="color: #bc6ec5;">]</span>
+  <span style="color: #bc6ec5;">(</span>map #<span style="color: #2d9574;">(</span>* <span style="color: #67b11d;">(</span>first <span style="color: #7590db;">%</span><span style="color: #67b11d;">)</span> <span style="color: #67b11d;">(</span>second <span style="color: #7590db;">%</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>
+       <span style="color: #2d9574;">(</span>map <span style="color: #67b11d;">(</span><span style="color: #4f97d7; font-weight: bold;">fn</span> <span style="color: #b1951d;">[</span>col-a col-b<span style="color: #b1951d;">]</span> <span style="color: #b1951d;">[</span><span style="color: #4f97d7;">(</span>pa col-a<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">(</span>pb col-b<span style="color: #4f97d7;">)</span><span style="color: #b1951d;">]</span><span style="color: #67b11d;">)</span>
+            points <span style="color: #67b11d;">(</span>rest points<span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defn</span> <span style="color: #bc6ec5; font-weight: bold;">polygon-area</span> <span style="color: #bc6ec5;">[</span>pol<span style="color: #bc6ec5;">]</span>
+  <span style="color: #bc6ec5;">(</span>/ <span style="color: #2d9574;">(</span>- <span style="color: #67b11d;">(</span>reduce + <span style="color: #b1951d;">(</span>cross-multiplication pol first second<span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span>
+        <span style="color: #67b11d;">(</span>reduce + <span style="color: #b1951d;">(</span>cross-multiplication pol second first<span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>
+     <span style="color: #a45bad;">2</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span>polygon-area polygon<span style="color: #4f97d7;">)</span>
+<span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">=&gt; 60</span>
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="orgd903392"></a>Complex Example<br />
+<div class="outline-text-5" id="text-orgd903392">
+<div class="org-src-container">
+<pre class="src src-clojure"><span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">Complex Example</span>
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defrecord</span> <span style="color: #ce537a; font-weight: bold;">Coordinate</span> <span style="color: #bc6ec5;">[</span>x y<span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)</span>
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defrecord</span> <span style="color: #ce537a; font-weight: bold;">Polygon</span> <span style="color: #bc6ec5;">[</span>points<span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defn</span> <span style="color: #bc6ec5; font-weight: bold;">map-points</span>
+  <span style="color: #9f8766;">"Cross the points `</span><span style="color: #a45bad;">pa</span><span style="color: #9f8766;">` `</span><span style="color: #a45bad;">pb</span><span style="color: #9f8766;">` from a polygon and map them together.</span>
+<span style="color: #9f8766;">  It returns a map of [(pa point-n) (pb point-n1)]."</span>
+  <span style="color: #bc6ec5;">[</span>pol pa pb<span style="color: #bc6ec5;">]</span>
+  <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">let</span> <span style="color: #2d9574;">[</span>points <span style="color: #67b11d;">(</span><span style="color: #a45bad;">:points</span> pol<span style="color: #67b11d;">)</span> <span style="color: #2aa1ae; background-color: #292e34;">; Get points from polygon</span>
+        <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">Remove first element and append it at the end to cross</span>
+        <span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">the points</span>
+        cross <span style="color: #67b11d;">(</span>conj <span style="color: #b1951d;">(</span>into <span style="color: #4f97d7;">[]</span> <span style="color: #4f97d7;">(</span>rest points<span style="color: #4f97d7;">)</span><span style="color: #b1951d;">)</span> <span style="color: #b1951d;">(</span>first points<span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">]</span>
+    <span style="color: #2d9574;">(</span>map
+     <span style="color: #67b11d;">(</span><span style="color: #4f97d7; font-weight: bold;">fn</span> <span style="color: #b1951d;">[</span>a b<span style="color: #b1951d;">]</span>
+       <span style="color: #b1951d;">[</span><span style="color: #4f97d7;">(</span>pa a<span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">(</span>pb b<span style="color: #4f97d7;">)</span><span style="color: #b1951d;">]</span><span style="color: #67b11d;">)</span>
+     points cross<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defn</span> <span style="color: #bc6ec5; font-weight: bold;">cross-product</span> <span style="color: #bc6ec5;">[</span>mapped-points<span style="color: #bc6ec5;">]</span>
+  <span style="color: #bc6ec5;">(</span>map #<span style="color: #2d9574;">(</span>* <span style="color: #67b11d;">(</span>first <span style="color: #7590db;">%</span><span style="color: #67b11d;">)</span> <span style="color: #67b11d;">(</span>second <span style="color: #7590db;">%</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span> mapped-points<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">defn</span> <span style="color: #bc6ec5; font-weight: bold;">area-of-polygon</span> <span style="color: #bc6ec5;">[</span>pol<span style="color: #bc6ec5;">]</span>
+  <span style="color: #bc6ec5;">(</span>/ <span style="color: #2d9574;">(</span>- <span style="color: #67b11d;">(</span>reduce + <span style="color: #b1951d;">(</span>cross-product <span style="color: #4f97d7;">(</span>map-points pol <span style="color: #a45bad;">:x</span> <span style="color: #a45bad;">:y</span><span style="color: #4f97d7;">)</span><span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span>
+        <span style="color: #67b11d;">(</span>reduce + <span style="color: #b1951d;">(</span>cross-product <span style="color: #4f97d7;">(</span>map-points pol <span style="color: #a45bad;">:y</span> <span style="color: #a45bad;">:x</span><span style="color: #4f97d7;">)</span><span style="color: #b1951d;">)</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>
+     <span style="color: #a45bad;">2</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #7590db;">irregular-polygon</span>
+  <span style="color: #9f8766;">"Define a new irregular polygon with 5 points."</span>
+  <span style="color: #bc6ec5;">(</span>-&gt;Polygon <span style="color: #2d9574;">[</span>
+              <span style="color: #67b11d;">(</span>-&gt;Coordinate <span style="color: #a45bad;">-3</span> <span style="color: #a45bad;">-2</span><span style="color: #67b11d;">)</span>
+              <span style="color: #67b11d;">(</span>-&gt;Coordinate <span style="color: #a45bad;">-1</span> <span style="color: #a45bad;">4</span><span style="color: #67b11d;">)</span>
+              <span style="color: #67b11d;">(</span>-&gt;Coordinate <span style="color: #a45bad;">6</span> <span style="color: #a45bad;">1</span><span style="color: #67b11d;">)</span>
+              <span style="color: #67b11d;">(</span>-&gt;Coordinate <span style="color: #a45bad;">3</span> <span style="color: #a45bad;">10</span><span style="color: #67b11d;">)</span>
+              <span style="color: #67b11d;">(</span>-&gt;Coordinate <span style="color: #a45bad;">-4</span> <span style="color: #a45bad;">9</span><span style="color: #67b11d;">)</span>
+              <span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+
+<span style="color: #4f97d7;">(</span>area-of-polygon irregular-polygon<span style="color: #4f97d7;">)</span>
+<span style="color: #2aa1ae; background-color: #292e34;">;; </span><span style="color: #2aa1ae; background-color: #292e34;">=&gt; 60</span>
+</pre>
+</div>
+
+<p>
+Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec
+facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis
+odio. Nunc porta vulputate tellus. Nunc rutrum turpis sed pede. Sed bibendum.
+Aliquam posuere. Nunc aliquet, augue nec adipiscing interdum, lacus tellus
+malesuada massa, quis varius mi purus non odio. Pellentesque condimentum,
+magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque
+sit amet urna. Curabitur vulputate vestibulum lorem. Fusce sagittis, libero
+non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla
+lacinia eros. Sed id ligula quis est convallis tempor. Curabitur lacinia
+pulvinar nibh. Nam a sapien.
+</p>
+
+
+<div class="figure">
+<p><img src="./img/example_spacemacs_3.png" alt="example_spacemacs_3.png" />
+</p>
+</div>
+
+<p>
+Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec
+facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis
+odio. Nunc porta vulputate tellus. Nunc rutrum turpis sed pede. Sed bibendum.
+Aliquam posuere. Nunc aliquet, augue nec adipiscing interdum, lacus tellus
+malesuada massa, quis varius mi purus non odio. Pellentesque condimentum,
+magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque
+sit amet urna. Curabitur vulputate vestibulum lorem. Fusce sagittis, libero
+non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla
+lacinia eros. Sed id ligula quis est convallis tempor. Curabitur lacinia
+pulvinar nibh. Nam a sapien.
+</p>
+
+<p>
+Pellentesque dapibus suscipit ligula. Donec posuere augue in quam. Etiam vel
+tortor sodales tellus ultricies commodo. Suspendisse potenti. Aenean in sem
+ac leo mollis blandit. Donec neque quam, dignissim in, mollis nec, sagittis
+eu, wisi. Phasellus lacus. Etiam laoreet quam sed arcu. Phasellus at dui in
+ligula mollis ultricies. Integer placerat tristique nisl. Praesent augue.
+Fusce commodo. Vestibulum convallis, lorem a tempus semper, dui dui euismod
+elit, vitae placerat urna tortor vitae lacus. Nullam libero mauris, consequat
+quis, varius et, dictum id, arcu. Mauris mollis tincidunt felis. Aliquam
+feugiat tellus ut neque. Nulla facilisis, risus a rhoncus fermentum, tellus
+tellus lacinia purus, et dictum nunc justo sit amet elit.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Net</span><span style="color: #4f97d7;">(</span>nn.Module<span style="color: #4f97d7;">)</span>:
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">__init__</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span>, input_dim, units, output_dim<span style="color: #4f97d7;">)</span>:
+        <span style="color: #9f8766;">"""Define all the layers on the neural network."""</span>
+        <span style="color: #4f97d7;">super</span><span style="color: #4f97d7;">(</span>Net, <span style="color: #4f97d7; font-weight: bold;">self</span><span style="color: #4f97d7;">)</span>.__init__<span style="color: #4f97d7;">()</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Input Layers:</span>
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">- feed forward neural network</span>
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">- lstm</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_1 = nn.Linear<span style="color: #4f97d7;">(</span>input_dim, units<span style="color: #4f97d7;">)</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.lstm_1 = nn.LSTM<span style="color: #4f97d7;">(</span>input_dim, units, num_layers=<span style="color: #a45bad;">2</span><span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Hidden Layers</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_2 = nn.Linear<span style="color: #4f97d7;">(</span>units, units<span style="color: #4f97d7;">)</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_3 = nn.Linear<span style="color: #4f97d7;">(</span>units, units<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">This layer outputs the LSTM layer and has the same shape as the</span>
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">second layer's input data.</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_4 = nn.Linear<span style="color: #4f97d7;">(</span>units, TIMESTEPS * <span style="color: #a45bad;">7</span><span style="color: #4f97d7;">)</span> <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">LSTM network</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_1 = nn.ReLU<span style="color: #4f97d7;">()</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_2 = nn.ReLU<span style="color: #4f97d7;">()</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_3 = nn.ReLU<span style="color: #4f97d7;">()</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_4 = nn.ReLU<span style="color: #4f97d7;">()</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.drop_1 = nn.Dropout<span style="color: #4f97d7;">(</span>p=<span style="color: #a45bad;">0</span>.<span style="color: #a45bad;">5</span><span style="color: #4f97d7;">)</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.drop_2 = nn.Dropout<span style="color: #4f97d7;">(</span>p=<span style="color: #a45bad;">0</span>.<span style="color: #a45bad;">5</span><span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Output Layers</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_1 = nn.Linear<span style="color: #4f97d7;">(</span>units, output_dim<span style="color: #4f97d7;">)</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_2 = nn.Linear<span style="color: #4f97d7;">(</span>units, output_dim<span style="color: #4f97d7;">)</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_3 = nn.Linear<span style="color: #4f97d7;">(</span>units, output_dim<span style="color: #4f97d7;">)</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_4 = nn.Linear<span style="color: #4f97d7;">(</span>units, output_dim<span style="color: #4f97d7;">)</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_5 = nn.Linear<span style="color: #4f97d7;">(</span>units, output_dim<span style="color: #4f97d7;">)</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_6 = nn.Linear<span style="color: #4f97d7;">(</span>units, output_dim<span style="color: #4f97d7;">)</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_7 = nn.Linear<span style="color: #4f97d7;">(</span>units, output_dim<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Output activation</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_1 = nn.ReLU<span style="color: #4f97d7;">()</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_2 = nn.ReLU<span style="color: #4f97d7;">()</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_3 = nn.ReLU<span style="color: #4f97d7;">()</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_4 = nn.ReLU<span style="color: #4f97d7;">()</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_5 = nn.ReLU<span style="color: #4f97d7;">()</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_6 = nn.ReLU<span style="color: #4f97d7;">()</span>
+        <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_7 = nn.ReLU<span style="color: #4f97d7;">()</span>
+        
+    <span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">forward</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">self</span>, x, y<span style="color: #4f97d7;">)</span>:
+        <span style="color: #9f8766;">"""Define how the layers interact with the data."""</span>
+        
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">LSTM Network</span>
+        <span style="color: #7590db;">lstm_out</span>, <span style="color: #7590db;">lstm_hidden</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.lstm_1<span style="color: #4f97d7;">(</span>y<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">y</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_4<span style="color: #4f97d7;">(</span>lstm_out<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">y</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_4<span style="color: #4f97d7;">(</span>y<span style="color: #4f97d7;">)</span>.view<span style="color: #4f97d7;">(</span>-<span style="color: #a45bad;">1</span>, TIMESTEPS * <span style="color: #a45bad;">7</span><span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Join output of LSTM and Feed Forward Network input</span>
+        <span style="color: #7590db;">x</span> = torch.cat<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">(</span>x, y<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Feed Forward Network</span>
+        <span style="color: #7590db;">x</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_1<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">x</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_1<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">x</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.drop_1<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #7590db;">x</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_2<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">x</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_2<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">x</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.drop_2<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #7590db;">x</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_3<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">x</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_3<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Outputs</span>
+        <span style="color: #7590db;">output_1</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_1<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">output_1</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_1<span style="color: #4f97d7;">(</span>output_1<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #7590db;">output_2</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_2<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">output_2</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_2<span style="color: #4f97d7;">(</span>output_2<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #7590db;">output_3</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_3<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">output_3</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_3<span style="color: #4f97d7;">(</span>output_3<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #7590db;">output_4</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_4<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">output_4</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_4<span style="color: #4f97d7;">(</span>output_4<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #7590db;">output_5</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_5<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">output_5</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_5<span style="color: #4f97d7;">(</span>output_5<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #7590db;">output_6</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_6<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">output_6</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_6<span style="color: #4f97d7;">(</span>output_6<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #7590db;">output_7</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.linear_output_7<span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span>
+        <span style="color: #7590db;">output_7</span> = <span style="color: #4f97d7; font-weight: bold;">self</span>.relu_out_7<span style="color: #4f97d7;">(</span>output_7<span style="color: #4f97d7;">)</span>
+        
+        <span style="color: #4f97d7; font-weight: bold;">return</span> output_1, output_2, output_3, output_4, output_5, output_6, output_7
+</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+
+<p class="author">Author Name</p>
+
+<!-- Initialize Custom Styling JS -->
+<script src="./js/styling.js"></script>
+</div>
+</body>
+</html>
