@@ -70,7 +70,7 @@
 #+HTML_HEAD: <link id="main-theme" rel="stylesheet" type="text/css" href="./css/styles.css"/>
     #+end_src
 
-    You can change the theme if Prism.js by changing ~/prism_tomorrow_night.css~ to another
+    You can change the theme of Prism.js by changing ~/prism_tomorrow_night.css~ to another
     file in the ~/css/~ folder.
 
     There are the available themes:
@@ -122,7 +122,6 @@
 
 ** This is what it looks like
 
-   [[https://vascoferreira25.github.io/org_mode_export_theme/index.html][Example Rust Guide]]
-
-   [[https://vascoferreira25.github.io/org_mode_export_theme/example.html][Example Typography]]
+   [[https://vascoferreira25.github.io/org_mode_export_theme/docs/index.html][Example Rust Guide]]
+   [[https://vascoferreira25.github.io/org_mode_export_theme/docs/example.html][Example Typography]]
    
