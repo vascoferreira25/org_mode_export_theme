@@ -124,5 +124,6 @@
 
    [[https://vascoferreira25.github.io/org_mode_export_theme/docs/index.html][Example Rust Guide
 ]]
+
    [[https://vascoferreira25.github.io/org_mode_export_theme/docs/example.html][Example Typography]]
    
